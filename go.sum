@@ -59,6 +59,10 @@ github.com/qbhy/goal v0.0.0-20210916082607-cd8d62432fc3 h1:vkCEl6K09Quza52f1p3as
 github.com/qbhy/goal v0.0.0-20210916082607-cd8d62432fc3/go.mod h1:bz9Ho7h/yLJF46fjvFFKi6Jo78Z6DRkelzq/MwslSlA=
 github.com/qbhy/goal v0.0.0-20210916105553-6badb4f5e584 h1:XT5BXXY+uObLuQ4A9/SSzyEDxdvh8I7B6VmUOh4+7qk=
 github.com/qbhy/goal v0.0.0-20210916105553-6badb4f5e584/go.mod h1:bz9Ho7h/yLJF46fjvFFKi6Jo78Z6DRkelzq/MwslSlA=
+github.com/qbhy/goal v0.0.0-20210917014336-aa3ee3964962 h1:qcPDR2c/nJy9AAlvidCSBDFSSj/n5a185S2abykQXOY=
+github.com/qbhy/goal v0.0.0-20210917014336-aa3ee3964962/go.mod h1:bz9Ho7h/yLJF46fjvFFKi6Jo78Z6DRkelzq/MwslSlA=
+github.com/qbhy/goal v0.0.0-20210917033149-aad2a7c65c58 h1:HKZAmT3jW/92wHOO0z7QeUJ8ZOWCcO5wgMoGi8GBGMg=
+github.com/qbhy/goal v0.0.0-20210917033149-aad2a7c65c58/go.mod h1:bz9Ho7h/yLJF46fjvFFKi6Jo78Z6DRkelzq/MwslSlA=
 github.com/rogpeppe/fastuuid v1.1.0/go.mod h1:jVj6XXZzXRy/MSR5jhDC/2q6DgLz+nrA6LYCDYWNEvQ=
 github.com/sergi/go-diff v1.0.0/go.mod h1:0CfEIISq7TuYL3j771MWULgwwjU+GofnZX9QAmXWZgo=
 github.com/shopspring/decimal v0.0.0-20180709203117-cd690d0c9e24/go.mod h1:M+9NzErvs504Cn4c5DxATwIqPbtswREoFCre64PpcG4=

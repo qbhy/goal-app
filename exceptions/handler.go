@@ -23,12 +23,7 @@ type ExceptionHandler struct {
 }
 
 func (handler ExceptionHandler) ShouldReport(exception contracts.Exception) bool {
-	for _, e := range dontReportExceptions {
-		if utils.IsSameStruct(e, exception) {
-			return false
-		}
-	}
-	return true
+	return !utils.IsInstanceIn(exception, dontReportExceptions...)
 }
 
 func (handler ExceptionHandler) Report(exception contracts.Exception) {
@@ -42,11 +37,21 @@ func (handler ExceptionHandler) Handle(exception contracts.Exception) {
 
 	switch e := exception.(type) {
 	case events.EventException:
-		logs.WithException(e).Info("事件报错啦")
+		handler.HandleEventException(e)
+
 	case http.HttpException:
 		logs.WithException(e).Error("控制器报错啦")
 		_ = e.Context.String(500, e.Error())
+
 	default:
 		logs.WithException(e).Info("默认异常")
 	}
+}
+
+func (handler ExceptionHandler) HandleEventException(exception events.EventException) {
+	logs.WithException(exception).Info("事件报错啦")
+}
+
+func (handler ExceptionHandler) HandleHttpException(exception http.HttpException) {
+	logs.WithException(exception).Info("http报错啦")
 }
