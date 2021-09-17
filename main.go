@@ -7,6 +7,8 @@ import (
 	"github.com/qbhy/goal/exceptions"
 	"github.com/qbhy/goal/http/routes"
 	"github.com/qbhy/goal/logs"
+	"github.com/qbhy/goal/validate"
+	"github.com/qbhy/goal/validate/checkers"
 	appExceptions "goalapp/exceptions"
 )
 
@@ -22,11 +24,16 @@ func main() {
 		return "返回了啥"
 	})
 
-	group := router.Group("/user")
+	group := router.Group("/param")
 
 	group.Get("/test", func(context echo.Context) interface{} {
+		validate.Make(contracts.Fields{
+			"id": context.QueryParams().Get("id"),
+		}, contracts.Checkers{
+			"id": {checkers.StringLength{1, 5}},
+		}).Assure()
+
 		return "测试"
 	})
-
 	logs.WithError(router.Start(":8000")).Debug("服务器报错了")
 }

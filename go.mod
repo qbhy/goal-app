@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/labstack/echo/v4 v4.5.0
-	github.com/qbhy/goal v0.0.0-20210917033149-aad2a7c65c58
+	github.com/qbhy/goal v0.0.0-20210917100331-6d12bd46b41e
 )
 
 require (
